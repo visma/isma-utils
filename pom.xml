@@ -43,6 +43,6 @@
     <scm>
         <connection>scm:git:https://github.com/visma/isma-utils.git</connection>
         <developerConnection>scm:git:https://github.com/visma/isma-utils.git</developerConnection>
-        <url>https://github.com/visma/isma-pom</url>
+        <url>https://github.com/visma/isma-utils</url>
     </scm>
 </project>

@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<!--
+	 | POM Relationships
+	-->
+	<groupId>org.isma</groupId>
+    <artifactId>isma-utils</artifactId>
+    <version>0.1</version>
+    <parent>
+        <groupId>org.isma</groupId>
+        <artifactId>isma-pom-external</artifactId>
+        <version>SNAPSHOT</version>
+    </parent>
+	<!--
+	 | Project Information
+	-->
+    <name>myapi utils</name>
+	<description>apis communes</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        <dependency>
+           <groupId>net.sf.jfcunit</groupId>
+			<artifactId>jfcunit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.uispec4j</groupId>
+            <artifactId>uispec4j</artifactId>
+            <scope>test</scope>
+            <classifier>jdk16</classifier>
+        </dependency>
+    </dependencies>
+    <scm>
+        <connection>scm:git:https://github.com/visma/isma-utils.git</connection>
+        <developerConnection>scm:git:https://github.com/visma/isma-utils.git</developerConnection>
+        <url>https://github.com/visma/isma-pom</url>
+    </scm>
+</project>

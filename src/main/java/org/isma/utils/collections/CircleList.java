@@ -4,8 +4,17 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.Predicate;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class CircleList<E> extends ArrayList<E> {
+    public CircleList() {
+        super();
+    }
+
+    public CircleList(Collection<? extends E> c) {
+        super(c);
+    }
+
     @Override
     public boolean add(E e) {
         if (!contains(e)) {
@@ -34,6 +43,9 @@ public class CircleList<E> extends ArrayList<E> {
         E nextElement = next(element);
         while (!predicate.evaluate(nextElement)) {
             nextElement = next(nextElement);
+            if (nextElement== element){
+                return null;
+            }
         }
         return nextElement;
     }

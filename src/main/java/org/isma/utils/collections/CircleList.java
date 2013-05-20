@@ -5,6 +5,7 @@ import org.apache.commons.collections.Predicate;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class CircleList<E> extends ArrayList<E> {
     public CircleList() {
@@ -23,6 +24,19 @@ public class CircleList<E> extends ArrayList<E> {
         return false;
     }
 
+
+    //TODO TU
+    public List<E> nextList(E element) {
+        List<E> nextList = new ArrayList<E>();
+        E next = next(element);
+        while (next != element && next != null){
+            //System.out.printf("element :  %s, next : %s\n", element, next);
+            nextList.add(next);
+            next = next(next);
+            System.out.println(next);
+        }
+        return nextList;
+    }
     public E next(E element) {
         int indexOf = indexOf(element);
         if (indexOf == -1){

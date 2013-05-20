@@ -30,10 +30,8 @@ public class CircleList<E> extends ArrayList<E> {
         List<E> nextList = new ArrayList<E>();
         E next = next(element);
         while (next != element && next != null){
-            //System.out.printf("element :  %s, next : %s\n", element, next);
             nextList.add(next);
             next = next(next);
-            System.out.println(next);
         }
         return nextList;
     }
